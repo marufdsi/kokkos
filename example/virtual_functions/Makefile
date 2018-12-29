@@ -26,7 +26,8 @@ CXX = ${KOKKOS_PATH}/bin/nvcc_wrapper
 EXE = virtual.cuda
 override LINKFLAGS += --remove-duplicate-link-files
 else
-CXX = g++
+#CXX = g++
+CXX = icpc
 EXE = virtual.host
 endif
 

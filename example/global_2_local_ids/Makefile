@@ -16,7 +16,8 @@ ifneq (,$(findstring Cuda,$(KOKKOS_DEVICES)))
   CXX = $(KOKKOS_PATH)/bin/nvcc_wrapper
   EXE = $(addsuffix .cuda, $(shell basename $(SRC_DIR)))
 else
-  CXX = g++
+  #CXX = g++
+  CXX = icpc
   EXE = $(addsuffix .host, $(shell basename $(SRC_DIR)))
 endif
 

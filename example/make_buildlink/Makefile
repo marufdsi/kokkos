@@ -21,7 +21,8 @@ ifneq (,$(findstring Cuda,$(KOKKOS_DEVICES)))
 CXX = ${KOKKOS_PATH}/bin/nvcc_wrapper
 EXE = make_buildlink.cuda
 else
-CXX = g++
+#CXX = g++
+CXX = icpc
 EXE = make_buildlink.host
 endif
 

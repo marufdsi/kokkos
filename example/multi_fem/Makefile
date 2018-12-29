@@ -21,7 +21,8 @@ ifneq (,$(findstring Cuda,$(KOKKOS_DEVICES)))
   CXXFLAGS += -I$(SRC_DIR) -I$(CUDA_PATH) -O3
   LDFLAGS += -L$(CUDA_PATH)/lib64 -lcusparse
 else
-  CXX = g++
+  #CXX = g++
+  CXX = icpc
   EXE = $(addsuffix .host, $(shell basename $(SRC_DIR)))
 endif
 
