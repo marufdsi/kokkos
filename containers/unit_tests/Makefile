@@ -15,7 +15,8 @@ default: build_all
 ifneq (,$(findstring Cuda,$(KOKKOS_DEVICES)))
   CXX = $(KOKKOS_PATH)/bin/nvcc_wrapper
 else
-  CXX = g++
+  #CXX = g++
+  CXX = icpc
 endif
 
 CXXFLAGS = -O3
