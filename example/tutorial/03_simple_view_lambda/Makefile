@@ -16,7 +16,8 @@ KOKKOS_DEVICES = "Cuda,OpenMP"
 KOKKOS_ARCH = "SNB,Kepler35"
 KOKKOS_CUDA_OPTIONS += "enable_lambda"
 else
-CXX = g++
+#CXX = g++
+CXX = icpc
 CXXFLAGS = -O3
 LINK = ${CXX}
 LDFLAGS =  

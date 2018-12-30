@@ -15,7 +15,8 @@ EXE = 02_memory_traits.cuda
 KOKKOS_DEVICES = "Cuda,OpenMP"
 KOKKOS_ARCH = "SNB,Kepler35"
 else
-CXX = g++
+#CXX = g++
+CXX = icpc
 CXXFLAGS = -O3
 LINK = ${CXX}
 LDFLAGS =  
